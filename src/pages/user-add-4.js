@@ -1,11 +1,9 @@
-import React from "react"
-
 import { Container } from "react-bootstrap"
 
-import ProgressBar from "../components/ProgressBar"
+import ProgressBar from "@components/ProgressBar"
 
-import data from "../data/user-add.json"
-import ListingForm from "../components/ListingForm"
+import data from "@jsonFiles/user-add.json"
+import ListingForm from "@components/ListingForm"
 
 export async function getStaticProps() {
   return {
@@ -24,7 +22,7 @@ export async function getStaticProps() {
 
 const UserAdd4 = () => {
   return (
-    <React.Fragment>
+    <>
       <ProgressBar progress={80} />
       <section className="py-5">
         <Container>
@@ -40,7 +38,7 @@ const UserAdd4 = () => {
           />
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

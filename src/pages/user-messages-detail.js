@@ -1,4 +1,3 @@
-import React from "react"
 import Link from "next/link"
 
 import {
@@ -12,9 +11,9 @@ import {
   InputGroup,
 } from "react-bootstrap"
 
-import data from "../data/user-messages-detail.json"
-import Stars from "../components/Stars"
-import Image from "../components/CustomImage"
+import data from "@jsonFiles/user-messages-detail.json"
+import Stars from "@components/Stars"
+import Image from "@components/CustomImage"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faArrowLeft,
@@ -22,7 +21,7 @@ import {
   faPaperPlane,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons"
-import Avatar from "../components/Avatar"
+import Avatar from "@components/Avatar"
 import { faCalendar } from "@fortawesome/free-regular-svg-icons"
 
 export async function getStaticProps() {

@@ -1,19 +1,18 @@
-import React from "react"
 import Link from "next/link"
 
 import { Container, Row, Col, Button } from "react-bootstrap"
 
-import Swiper from "../components/Swiper"
+import Swiper from "@components/Swiper"
 
-import SearchBar from "../components/SearchBar"
-import PopularCities from "../components/PopularCities"
-import Discover from "../components/Discover"
-import Instagram from "../components/Instagram"
-import Brands from "../components/Brands"
+import SearchBar from "@components/SearchBar"
+import PopularCities from "@components/PopularCities"
+import Discover from "@components/Discover"
+import Instagram from "@components/Instagram"
+import Brands from "@components/Brands"
 
-import data from "../data/index2.json"
-import geoJSON from "../data/restaurants-geojson.json"
-import Image from "../components/CustomImage"
+import data from "@jsonFiles/index2.json"
+import geoJSON from "@jsonFiles/restaurants-geojson.json"
+import Image from "@components/CustomImage"
 
 export async function getStaticProps() {
   return {
@@ -30,7 +29,7 @@ export async function getStaticProps() {
 
 const Index2 = () => {
   return (
-    <React.Fragment>
+    <>
       {data.hero && (
         <section className="d-flex align-items-center dark-overlay">
           <Image
@@ -170,7 +169,7 @@ const Index2 = () => {
       )}
 
       <Instagram />
-    </React.Fragment>
+    </>
   )
 }
 

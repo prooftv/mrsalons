@@ -1,22 +1,21 @@
-import React from "react"
 import Link from "next/link"
-import Image from "../components/CustomImage"
-import { Container, Row, Col, Button } from "react-bootstrap"
-
-import Swiper from "../components/Swiper"
-import SearchBar from "../components/SearchBar"
-import LastMinute from "../components/LastMinute"
-import Guides from "../components/Guides"
-import Instagram from "../components/Instagram"
-import CardPost from "../components/CardPost"
-
-import SwiperTestimonial from "../components/SwiperTestimonial"
-
-import data from "../data/index.json"
-import blog from "../data/blog.json"
-import Icon from "../components/Icon"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
+import { Container, Row, Col, Button } from "react-bootstrap"
+
+import Image from "@components/CustomImage"
+import Swiper from "@components/Swiper"
+import SearchBar from "@components/SearchBar"
+import LastMinute from "@components/LastMinute"
+import Guides from "@components/Guides"
+import Instagram from "@components/Instagram"
+import CardPost from "@components/CardPost"
+
+import SwiperTestimonial from "@components/SwiperTestimonial"
+
+import data from "@jsonFiles/index.json"
+import blog from "@jsonFiles/blog.json"
+import Icon from "@components/Icon"
 
 export async function getStaticProps() {
   return {
@@ -33,7 +32,7 @@ export async function getStaticProps() {
 
 const Index = () => {
   return (
-    <React.Fragment>
+    <>
       <section className="hero-home">
         <Swiper
           className="hero-slider"
@@ -182,7 +181,7 @@ const Index = () => {
       )}
 
       <Instagram />
-    </React.Fragment>
+    </>
   )
 }
 

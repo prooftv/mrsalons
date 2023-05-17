@@ -3,7 +3,7 @@ import React from "react"
 import Link from "next/link"
 
 import { Container, Button } from "react-bootstrap"
-import Image from "../components/CustomImage"
+import Image from "@components/CustomImage"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHome } from "@fortawesome/free-solid-svg-icons"
 
@@ -22,7 +22,7 @@ export async function getStaticProps() {
 
 const page404 = () => {
   return (
-    <React.Fragment>
+    <>
       <div className="mh-full-screen d-flex align-items-center dark-overlay">
         <Image
           src="/content/img/photo/aron-visuals-3jBU9TbKW7o-unsplash.jpg"
@@ -52,7 +52,7 @@ const page404 = () => {
           <p className="h4 text-shadow">Error 404</p>
         </Container>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 

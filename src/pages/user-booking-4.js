@@ -1,17 +1,15 @@
-import React from "react"
-
 import Link from "next/link"
-
+import { useContext } from "react"
 import { Container, Button, Row, Col } from "react-bootstrap"
 
-import { BookingContext } from "../components/BookingContext"
+import { BookingContext } from "@components/BookingContext"
 
-import ProgressBar from "../components/ProgressBar"
+import ProgressBar from "@components/ProgressBar"
 
-import data from "../data/user-booking.json"
+import data from "@jsonFiles/user-booking.json"
 
-import BookingColumn from "../components/BookingColumn"
-import Image from "../components/CustomImage"
+import BookingColumn from "@components/BookingColumn"
+import Image from "@components/CustomImage"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFile } from "@fortawesome/free-regular-svg-icons"
 
@@ -31,11 +29,11 @@ export async function getStaticProps() {
 }
 
 const UserBooking4 = () => {
-  const [bookingInputs, setBookingInputs] = React.useContext(BookingContext)
+  const [bookingInputs, setBookingInputs] = useContext(BookingContext)
 
   console.log(bookingInputs)
   return (
-    <React.Fragment>
+    <>
       <ProgressBar progress={100} />
       <section className="py-5">
         <Container>
@@ -80,7 +78,7 @@ const UserBooking4 = () => {
           </Row>
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

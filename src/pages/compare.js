@@ -1,7 +1,5 @@
-import React from "react"
-
 import Link from "next/link"
-
+import { Fragment } from "react"
 import {
   Container,
   Row,
@@ -11,10 +9,10 @@ import {
   Badge,
 } from "react-bootstrap"
 
-import Stars from "../components/Stars"
+import Stars from "@components/Stars"
 
-import data from "../data/compare.json"
-import Icon from "../components/Icon"
+import data from "@jsonFiles/compare.json"
+import Icon from "@components/Icon"
 
 export async function getStaticProps() {
   return {
@@ -31,7 +29,7 @@ export async function getStaticProps() {
 
 const Compare = () => {
   return (
-    <React.Fragment>
+    <>
       <section className="hero py-5 py-lg-7">
         <Container className="position-relative">
           <Breadcrumb listProps={{ className: "ps-0 justify-content-center" }}>
@@ -65,7 +63,7 @@ const Compare = () => {
                               <Stars stars={column.stars} />
                             </span>
                             {column.badge && (
-                              <React.Fragment>
+                              <Fragment>
                                 <br />
                                 <Badge
                                   bg={column.badgeColor + "-light"}
@@ -74,7 +72,7 @@ const Compare = () => {
                                 >
                                   {column.badge}
                                 </Badge>
-                              </React.Fragment>
+                              </Fragment>
                             )}
                           </a>
                         </Link>
@@ -317,7 +315,7 @@ const Compare = () => {
           </Row>
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

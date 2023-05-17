@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
-import UseWindowSize from "../hooks/UseWindowSize"
+import UseWindowSize from "@hooks/UseWindowSize"
 
 import { DayPicker } from "react-day-picker"
 import "react-day-picker/dist/style.css"
@@ -18,11 +18,11 @@ import {
 } from "react-bootstrap"
 
 import Nouislider from "nouislider-react"
-import Pagination from "../components/Pagination"
-import Map from "../components/Map"
+import Pagination from "@components/Pagination"
+import Map from "@components/Map"
 
-import ResultsTopBar from "../components/ResultsTopBar"
-import CardRoom from "../components/CardRoom"
+import ResultsTopBar from "@components/ResultsTopBar"
+import CardRoom from "@components/CardRoom"
 
 import data from "../data/category-2-rooms.json"
 import geoJSON from "../data/rooms-geojson.json"
@@ -82,7 +82,7 @@ const Category2Rooms = () => {
   }, [range])
 
   return (
-    <React.Fragment>
+    <>
       <Container fluid>
         <Row>
           <Col lg="6" className="py-4 p-xl-5">
@@ -487,7 +487,7 @@ const Category2Rooms = () => {
           </Col>
         </Row>
       </Container>
-    </React.Fragment>
+    </>
   )
 }
 

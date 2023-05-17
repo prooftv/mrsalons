@@ -1,15 +1,15 @@
-import React from "react"
+import {useState} from "react"
 import Link from "next/link"
 
 import { Container, Row, Col, Nav } from "react-bootstrap"
 
-import CardRoom from "../components/CardRoom"
-import ResultsTopBar from "../components/ResultsTopBar"
-import Pagination from "../components/Pagination"
-import Map from "../components/Map"
+import CardRoom from "@components/CardRoom"
+import ResultsTopBar from "@components/ResultsTopBar"
+import Pagination from "@components/Pagination"
+import Map from "@components/Map"
 
-import data from "../data/category-rooms.json"
-import geoJSON from "../data/rooms-geojson.json"
+import data from "@jsonFiles/category-rooms.json"
+import geoJSON from "@jsonFiles/rooms-geojson.json"
 
 export async function getStaticProps() {
   return {
@@ -25,7 +25,7 @@ export async function getStaticProps() {
 }
 
 const CategoryRooms = () => {
-  const [hoverCard, setHoverCard] = React.useState(null)
+  const [hoverCard, setHoverCard] = useState(null)
   const onCardEnter = (id) => {
     setHoverCard(id)
   }
@@ -33,7 +33,7 @@ const CategoryRooms = () => {
     setHoverCard(null)
   }
   return (
-    <React.Fragment>
+    <>
       <section>
         <div className="map-wrapper-450">
           <Map
@@ -50,7 +50,7 @@ const CategoryRooms = () => {
           <h1>{data.title && data.title}</h1>
           <p className="lead mb-5">{data.content && data.content}</p>
           {data.cityQuarters && (
-            <React.Fragment>
+            <>
               <h5>{data.cityQuarters.title}</h5>
               <Nav className="nav-pills-custom">
                 {data.cityQuarters.items.map((pill, index) => (
@@ -63,7 +63,7 @@ const CategoryRooms = () => {
                   </Nav.Item>
                 ))}
               </Nav>
-            </React.Fragment>
+            </>
           )}
         </Container>
       </section>
@@ -91,7 +91,7 @@ const CategoryRooms = () => {
           <Pagination />
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

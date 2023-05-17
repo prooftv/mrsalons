@@ -1,17 +1,16 @@
-import React from "react"
-
+import {useState} from "react"
 import { Container, Row, Col, Form, Collapse, Button } from "react-bootstrap"
 
 import Select from "react-select"
 
-import CardRestaurant from "../components/CardRestaurant"
-import ResultsTopBar from "../components/ResultsTopBar"
+import CardRestaurant from "@components/CardRestaurant"
+import ResultsTopBar from "@components/ResultsTopBar"
 import Nouislider from "nouislider-react"
-import Pagination from "../components/Pagination"
-import Map from "../components/Map"
+import Pagination from "@components/Pagination"
+import Map from "@components/Map"
 
-import data from "../data/category2.json"
-import geoJSON from "../data/restaurants-geojson.json"
+import data from "@jsonFiles/category2.json"
+import geoJSON from "@jsonFiles/restaurants-geojson.json"
 import { faFilter, faSearch } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -29,17 +28,17 @@ export async function getStaticProps() {
 }
 
 const Category2 = () => {
-  const [filterCollapse, setFilterCollapse] = React.useState(false)
+  const [filterCollapse, setFilterCollapse] = useState(false)
 
-  const [priceMin, setPriceMin] = React.useState(40)
-  const [priceMax, setPriceMax] = React.useState(110)
+  const [priceMin, setPriceMin] = useState(40)
+  const [priceMax, setPriceMax] = useState(110)
 
   const priceSlider = (render, handle, value, un, percent) => {
     setPriceMin(value[0].toFixed(0))
     setPriceMax(value[1].toFixed(0))
   }
 
-  const [hoverCard, setHoverCard] = React.useState(null)
+  const [hoverCard, setHoverCard] = useState(null)
   const onCardEnter = (id) => {
     setHoverCard(id)
   }
@@ -47,7 +46,7 @@ const Category2 = () => {
     setHoverCard(null)
   }
   return (
-    <React.Fragment>
+    <>
       <Container fluid>
         <Row>
           <Col lg="6" className="py-5 p-xl-5">
@@ -246,7 +245,7 @@ const Category2 = () => {
           </Col>
         </Row>
       </Container>
-    </React.Fragment>
+    </>
   )
 }
 

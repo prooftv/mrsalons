@@ -4,10 +4,10 @@ import Link from "next/link"
 
 import { Container, Row, Col, Pagination, Button, Card } from "react-bootstrap"
 
-import CardPost from "../components/CardPost"
+import CardPost from "@components/CardPost"
 
-import data from "../data/blog.json"
-import Image from "../components/CustomImage"
+import data from "@jsonFiles/blog.json"
+import Image from "@components/CustomImage"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faChevronLeft,
@@ -32,7 +32,7 @@ const Blog = () => {
   const featuredPost = data.posts[0]
 
   return (
-    <React.Fragment>
+    <>
       {featuredPost && (
         <section className="position-relative py-6">
           {featuredPost.img && (
@@ -106,7 +106,7 @@ const Blog = () => {
           </Pagination>
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

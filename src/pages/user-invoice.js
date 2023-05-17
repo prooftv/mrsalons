@@ -1,4 +1,3 @@
-import React from "react"
 import Link from "next/link"
 
 import {
@@ -11,7 +10,7 @@ import {
   Table,
 } from "react-bootstrap"
 
-import data from "../data/user-invoice.json"
+import data from "@jsonFiles/user-invoice.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons"
 import { faPrint } from "@fortawesome/free-solid-svg-icons"

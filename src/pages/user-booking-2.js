@@ -1,16 +1,14 @@
-import React from "react"
-
 import Link from "next/link"
 
 import { Container, Row, Col, Button, Alert } from "react-bootstrap"
 
-import ProgressBar from "../components/ProgressBar"
+import ProgressBar from "@components/ProgressBar"
 
-import data from "../data/user-booking.json"
+import data from "@jsonFiles/user-booking.json"
 
-import BookingForm from "../components/BookingForm"
-import BookingColumn from "../components/BookingColumn"
-import Icon from "../components/Icon"
+import BookingForm from "@components/BookingForm"
+import BookingColumn from "@components/BookingColumn"
+import Icon from "@components/Icon"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faChevronLeft,
@@ -34,7 +32,7 @@ export async function getStaticProps() {
 
 const UserBooking2 = () => {
   return (
-    <React.Fragment>
+    <>
       <ProgressBar progress={50} />
       <section className="py-5">
         <Container>
@@ -84,7 +82,7 @@ const UserBooking2 = () => {
           </Row>
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

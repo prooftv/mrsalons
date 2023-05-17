@@ -1,9 +1,8 @@
-import React from "react"
 import Link from "next/link"
 
 import { Container, Row, Col, Card, Breadcrumb } from "react-bootstrap"
 
-import data from "../data/user-grid.json"
+import data from "@jsonFiles/user-grid.json"
 
 export async function getStaticProps() {
   return {
@@ -19,8 +18,8 @@ export async function getStaticProps() {
   }
 }
 
-import Stars from "../components/Stars"
-import Image from "../components/CustomImage"
+import Stars from "@components/Stars"
+import Image from "@components/CustomImage"
 
 const UserGrid = () => {
   return (

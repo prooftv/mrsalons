@@ -1,10 +1,9 @@
-import React from "react"
 import Link from "next/link"
 
 import { Container, Row, Col, Card, Breadcrumb } from "react-bootstrap"
 
-import data from "../data/user-account.json"
-import Icon from "../components/Icon"
+import data from "@jsonFiles/user-account.json"
+import Icon from "@components/Icon"
 
 export async function getStaticProps() {
   return {

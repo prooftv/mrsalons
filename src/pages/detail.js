@@ -1,6 +1,5 @@
-import React from "react"
 import Link from "next/link"
-
+import { useState } from "react"
 import {
   Container,
   Row,
@@ -11,18 +10,18 @@ import {
   Badge,
 } from "react-bootstrap"
 
-import Swiper from "../components/Swiper"
+import Swiper from "@components/Swiper"
 
-import Stars from "../components/Stars"
-import Reviews from "../components/Reviews"
-import ReviewForm from "../components/ReviewForm"
-import Gallery from "../components/Gallery"
+import Stars from "@components/Stars"
+import Reviews from "@components/Reviews"
+import ReviewForm from "@components/ReviewForm"
+import Gallery from "@components/Gallery"
 
-import data from "../data/detail.json"
-import geoJSON from "../data/restaurants-geojson.json"
-import Image from "../components/CustomImage"
-import Icon from "../components/Icon"
-import Map from "../components/Map"
+import data from "@jsonFiles/detail.json"
+import geoJSON from "@jsonFiles/restaurants-geojson.json"
+import Image from "@components/CustomImage"
+import Icon from "@components/Icon"
+import Map from "@components/Map"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faCheck,
@@ -54,10 +53,10 @@ export async function getStaticProps() {
 }
 
 const Detail = () => {
-  const [reviewCollapse, setReviewCollapse] = React.useState(false)
+  const [reviewCollapse, setReviewCollapse] = useState(false)
 
   return (
-    <React.Fragment>
+    <>
       <section className="pt-7 pb-5 d-flex align-items-end dark-overlay">
         <Image
           src={`/content/img/photo/${data.img}`}
@@ -310,7 +309,7 @@ const Detail = () => {
           </Container>
         </section>
       )}
-    </React.Fragment>
+    </>
   )
 }
 

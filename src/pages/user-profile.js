@@ -1,15 +1,13 @@
-import React from "react"
-
 import { Container, Row, Col, Card, Badge } from "react-bootstrap"
 
-import data from "../data/user-profile.json"
-import geoJSON from "../data/rooms-geojson.json"
+import data from "@jsonFiles/user-profile.json"
+import geoJSON from "@jsonFiles/rooms-geojson.json"
 
-import CardRoom from "../components/CardRoom"
-import Reviews from "../components/Reviews"
-import ReviewForm from "../components/ReviewForm"
-import Icon from "../components/Icon"
-import Image from "../components/CustomImage"
+import CardRoom from "@components/CardRoom"
+import Reviews from "@components/Reviews"
+import ReviewForm from "@components/ReviewForm"
+import Icon from "@components/Icon"
+import Image from "@components/CustomImage"
 
 export async function getStaticProps() {
   return {

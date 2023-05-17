@@ -1,5 +1,3 @@
-import React from "react"
-
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap"
 
 import Link from "next/link"
@@ -19,7 +17,7 @@ export async function getStaticProps() {
 
 const Terms = (props) => {
   return (
-    <React.Fragment>
+    <>
       <section className="hero py-5 py-lg-7">
         <Container className="position-relative">
           <Breadcrumb listProps={{ className: "ps-0 justify-content-center" }}>
@@ -175,7 +173,7 @@ const Terms = (props) => {
           </Row>
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

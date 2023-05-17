@@ -1,4 +1,3 @@
-import React from "react"
 import Link from "next/link"
 
 import Select from "react-select"
@@ -13,9 +12,9 @@ import {
   Form,
 } from "react-bootstrap"
 
-import data from "../data/user-messages.json"
-import Image from "../components/CustomImage"
-import Avatar from "../components/Avatar"
+import data from "@jsonFiles/user-messages.json"
+import Image from "@components/CustomImage"
+import Avatar from "@components/Avatar"
 
 export async function getStaticProps() {
   return {
