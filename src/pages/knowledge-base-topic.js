@@ -1,5 +1,3 @@
-import React from "react"
-
 import {
   Container,
   Row,
@@ -11,8 +9,8 @@ import {
 } from "react-bootstrap"
 
 import Link from "next/link"
-import Support from "../components/Support"
-import Icon from "../components/Icon"
+import Support from "@components/Support"
+import Icon from "@components/Icon"
 import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFile } from "@fortawesome/free-regular-svg-icons"
@@ -31,7 +29,7 @@ export async function getStaticProps() {
 
 const KnowledgeBaseTopic = () => {
   return (
-    <React.Fragment>
+    <>
       <section className="hero py-5 py-lg-7">
         <Container className="position-relative">
           <Breadcrumb
@@ -208,7 +206,7 @@ const KnowledgeBaseTopic = () => {
         </Container>
       </section>
       <Support />
-    </React.Fragment>
+    </>
   )
 }
 

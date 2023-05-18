@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { NavItem, NavLink, Dropdown, Row, Col, Badge } from "react-bootstrap"
-import ActiveLink from "./../ActiveLink"
-import Icon from "./../Icon"
-import Image from "./../CustomImage"
+import ActiveLink from "@components/ActiveLink"
+import Icon from "@components/Icon"
+import Image from "@components/CustomImage"
 export default function DropdownMenuItem({ onLinkClick, item, parentName }) {
   const [open, setOpen] = useState(false)
   const [toggleClick, setToggleClick] = useState(false)

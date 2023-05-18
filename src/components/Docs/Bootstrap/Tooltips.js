@@ -1,11 +1,11 @@
-import React from "react"
+import {useState} from "react"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
 import { Card, OverlayTrigger, Button, Tooltip } from "react-bootstrap"
 
 const Tooltips = () => {
-  const [tooltipActive, setTooltipActive] = React.useState({})
+  const [tooltipActive, setTooltipActive] = useState({})
 
   const toggle = (name) => {
     setTooltipActive({ ...tooltipActive, [name]: !tooltipActive[name] })

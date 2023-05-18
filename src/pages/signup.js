@@ -1,9 +1,8 @@
-import React from "react"
 import Link from "next/link"
 
 import { Container, Row, Col, Button, Form } from "react-bootstrap"
-import Image from "../components/CustomImage"
-import Icon from "../components/Icon"
+import Image from "@components/CustomImage"
+import Icon from "@components/Icon"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebookF, faGoogle } from "@fortawesome/free-brands-svg-icons"
 

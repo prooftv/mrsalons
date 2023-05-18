@@ -1,4 +1,3 @@
-import React from "react"
 import Link from "next/link"
 
 import {
@@ -14,15 +13,14 @@ import {
 
 import Select from "react-select"
 
-import Swiper from "../components/Swiper"
-import PopularCities from "../components/PopularCities"
-import Discover from "../components/Discover"
-import Brands from "../components/Brands"
-import Instagram from "../components/Instagram"
+import Swiper from "@components/Swiper"
+import PopularCities from "@components/PopularCities"
+import Discover from "@components/Discover"
+import Brands from "@components/Brands"
+import Instagram from "@components/Instagram"
 
-import data from "../data/index4.json"
-import Image from "../components/CustomImage"
-import { Fragment } from "react"
+import data from "@jsonFiles/index4.json"
+import Image from "@components/CustomImage"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 
@@ -41,7 +39,7 @@ export async function getStaticProps() {
 
 const Index4 = () => {
   return (
-    <React.Fragment>
+    <>
       <section className="d-flex align-items-center dark-overlay">
         <Image
           src={data.hero}
@@ -290,7 +288,7 @@ const Index4 = () => {
         />
       )}
       <Instagram />
-    </React.Fragment>
+    </>
   )
 }
 

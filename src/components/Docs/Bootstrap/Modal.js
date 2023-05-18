@@ -1,11 +1,11 @@
-import React from "react"
+import {useState} from "react"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
 import { Modal, Button } from "react-bootstrap"
 
 const ModalComponent = () => {
-  const [modal, setModal] = React.useState(false)
+  const [modal, setModal] = useState(false)
 
   const onClick = () => {
     setModal(!modal)

@@ -1,6 +1,5 @@
-import React from "react"
+import {useState, Fragment} from "react"
 import Link from "next/link"
-
 import {
   Container,
   Row,
@@ -10,7 +9,7 @@ import {
   Breadcrumb,
 } from "react-bootstrap"
 
-import data from "../data/user-booking-detail.json"
+import data from "@jsonFiles/user-booking-detail.json"
 
 export async function getStaticProps() {
   return {
@@ -26,8 +25,8 @@ export async function getStaticProps() {
   }
 }
 
-import Swiper from "../components/Swiper"
-import Map from "../components/Map"
+import Swiper from "@components/Swiper"
+import Map from "@components/Map"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faPrint,
@@ -37,10 +36,10 @@ import {
   faSmokingBan,
 } from "@fortawesome/free-solid-svg-icons"
 import { faFile } from "@fortawesome/free-regular-svg-icons"
-import Avatar from "../components/Avatar"
+import Avatar from "@components/Avatar"
 
 const UserBookingDetail = () => {
-  const [rulesCollapse, setRulesCollapse] = React.useState(false)
+  const [rulesCollapse, setRulesCollapse] = useState(false)
 
   const splitRulesBy = (n, data) => {
     let result = []
@@ -226,7 +225,7 @@ const UserBookingDetail = () => {
               })}
             </ul>
             {splitedRules[1] && (
-              <React.Fragment>
+              <Fragment>
                 <Collapse in={rulesCollapse}>
                   <ul className="list-unstyled">
                     {splitedRules[1].map((item, index) => {
@@ -270,7 +269,7 @@ const UserBookingDetail = () => {
                 >
                   {rulesCollapse ? "Show less" : "Show more"}
                 </Button>
-              </React.Fragment>
+              </Fragment>
             )}
           </div>
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 
 import { Pagination } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
-import CardTestimonial from "../components/CardTestimonial"
+import CardTestimonial from "@components/CardTestimonial"
 
 const SwiperTestimonial = (props) => {
   const [domLoaded, setDomLoaded] = useState(false)

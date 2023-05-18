@@ -5,12 +5,12 @@ import { Container, Row, Col, Form, Collapse, Button } from "react-bootstrap"
 import Select from "react-select"
 import Nouislider from "nouislider-react"
 
-import CardRestaurant from "../components/CardRestaurant"
-import ResultsTopBar from "../components/ResultsTopBar"
-import Pagination from "../components/Pagination"
+import CardRestaurant from "@components/CardRestaurant"
+import ResultsTopBar from "@components/ResultsTopBar"
+import Pagination from "@components/Pagination"
 
-import data from "../data/category3.json"
-import geoJSON from "../data/restaurants-geojson.json"
+import data from "@jsonFiles/category3.json"
+import geoJSON from "@jsonFiles/restaurants-geojson.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFilter, faSearch } from "@fortawesome/free-solid-svg-icons"
 
@@ -37,7 +37,7 @@ const Category3 = () => {
     setPriceMax(value[1].toFixed(0))
   }
   return (
-    <React.Fragment>
+    <>
       <Container fluid className="py-5 px-lg-5">
         <Row className="border-bottom mb-4">
           <Col xs="12">
@@ -213,7 +213,7 @@ const Category3 = () => {
           </Col>
         </Row>
       </Container>
-    </React.Fragment>
+    </>
   )
 }
 

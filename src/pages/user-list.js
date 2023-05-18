@@ -1,5 +1,3 @@
-import React from "react"
-
 import Link from "next/link"
 
 import {
@@ -13,10 +11,10 @@ import {
 } from "react-bootstrap"
 import Select from "react-select"
 
-import data from "../data/user-list.json"
+import data from "@jsonFiles/user-list.json"
 
-import Pagination from "../components/Pagination"
-import Avatar from "../components/Avatar"
+import Pagination from "@components/Pagination"
+import Avatar from "@components/Avatar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheck, faTimes, faDownload } from "@fortawesome/free-solid-svg-icons"
 

@@ -1,13 +1,11 @@
-import React from "react"
-
 import Link from "next/link"
 
 import { Container, Row, Col, Button } from "react-bootstrap"
 
-import ProgressBar from "../components/ProgressBar"
+import ProgressBar from "@components/ProgressBar"
 
-import data from "../data/user-add.json"
-import Image from "../components/CustomImage"
+import data from "@jsonFiles/user-add.json"
+import Image from "@components/CustomImage"
 
 export async function getStaticProps() {
   return {
@@ -25,7 +23,7 @@ export async function getStaticProps() {
 
 const UserAdd0 = () => {
   return (
-    <React.Fragment>
+    <>
       <ProgressBar progress={0} />
       <section className="py-5 py-lg-7">
         <Container>
@@ -57,7 +55,7 @@ const UserAdd0 = () => {
           </Row>
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

@@ -1,15 +1,14 @@
-import React from "react"
-
 import Link from "next/link"
+import { useContext } from "react"
 
 import { Container, Button } from "react-bootstrap"
 
-import { FormContext } from "../components/FormContext"
+import { FormContext } from "@components/FormContext"
 
-import ProgressBar from "../components/ProgressBar"
+import ProgressBar from "@components/ProgressBar"
 
-import data from "../data/user-add.json"
-import Image from "../components/CustomImage"
+import data from "@jsonFiles/user-add.json"
+import Image from "@components/CustomImage"
 
 export async function getStaticProps() {
   return {
@@ -27,11 +26,11 @@ export async function getStaticProps() {
 }
 
 const UserAdd5 = () => {
-  const [formInputs, setFormInputs] = React.useContext(FormContext)
+  const [formInputs, setFormInputs] = useContext(FormContext)
 
   console.log(formInputs)
   return (
-    <React.Fragment>
+    <>
       <ProgressBar progress={100} />
       <section className="py-5">
         <Container className="text-center">
@@ -60,7 +59,7 @@ const UserAdd5 = () => {
           </p>
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

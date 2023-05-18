@@ -4,7 +4,7 @@ import { Media, Card } from "react-bootstrap"
 
 import Stars from "../components/Stars"
 import Icon from "./Icon"
-import Image from "../components/CustomImage"
+import Image from "@components/CustomImage"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight, faUsers } from "@fortawesome/free-solid-svg-icons"
 import { faCalendar } from "@fortawesome/free-regular-svg-icons"

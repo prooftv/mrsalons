@@ -1,6 +1,6 @@
 import React from "react"
 import dynamic from "next/dynamic"
-import UseWindowSize from "../hooks/UseWindowSize"
+import UseWindowSize from "@hooks/UseWindowSize"
 
 let MapLeaflet
 const Map = (props) => {
@@ -10,7 +10,7 @@ const Map = (props) => {
   const size = UseWindowSize()
 
   React.useEffect(() => {
-    MapLeaflet = dynamic(() => import("../components/MapLeaflet"), {
+    MapLeaflet = dynamic(() => import("@components/MapLeaflet"), {
       ssr: false,
     })
     setMapLoaded(true)

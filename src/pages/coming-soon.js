@@ -1,6 +1,6 @@
 import React from "react"
 import { Container } from "react-bootstrap"
-import Image from "../components/CustomImage"
+import Image from "@components/CustomImage"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,

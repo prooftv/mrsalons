@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import { Container, Row, Col, Card } from "react-bootstrap"
 
-import data from "../data/popular_cities.json"
+import data from "@jsonFiles/popular_cities.json"
 import Image from "./CustomImage"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"

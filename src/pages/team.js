@@ -1,13 +1,11 @@
-import React from "react"
-
 import Link from "next/link"
 
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap"
 
-import data from "../data/team.json"
+import data from "@jsonFiles/team.json"
 
-import CardTeam from "../components/CardTeam"
-import Image from "../components/CustomImage"
+import CardTeam from "@components/CardTeam"
+import Image from "@components/CustomImage"
 
 export async function getStaticProps() {
   return {
@@ -35,7 +33,7 @@ const Team = () => {
     )
   }
   return (
-    <React.Fragment>
+    <>
       <section className="hero py-5 py-lg-7">
         <Container className="position-relative">
           <Breadcrumb listProps={{ className: "ps-0 justify-content-center" }}>
@@ -118,7 +116,7 @@ const Team = () => {
           </Container>
         </section>
       )}
-    </React.Fragment>
+    </>
   )
 }
 

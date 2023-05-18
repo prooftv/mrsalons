@@ -1,4 +1,4 @@
-import React from "react"
+import { useState } from "react"
 import Link from "next/link"
 
 import {
@@ -13,8 +13,8 @@ import {
   Breadcrumb,
 } from "react-bootstrap"
 
-import data from "../data/user-security.json"
-import Icon from "../components/Icon"
+import data from "@jsonFiles/user-security.json"
+import Icon from "@components/Icon"
 
 export async function getStaticProps() {
   return {
@@ -31,7 +31,7 @@ export async function getStaticProps() {
 }
 
 const UserSecurity = () => {
-  const [loginCollapse, setLoginCollapse] = React.useState(false)
+  const [loginCollapse, setLoginCollapse] = useState(false)
 
   return (
     <section className="py-5">

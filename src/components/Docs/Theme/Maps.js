@@ -3,10 +3,10 @@ import React from "react"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
-import geoJSONRestaurants from "../../../data/restaurants-geojson.json"
-import geoJSONRooms from "../../../data/rooms-geojson.json"
+import geoJSONRestaurants from "@jsonFiles/restaurants-geojson.json"
+import geoJSONRooms from "@jsonFiles/rooms-geojson.json"
 
-import Map from "../../Map"
+import Map from "@components/Map"
 
 const Maps = () => {
   return (

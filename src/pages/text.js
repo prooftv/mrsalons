@@ -1,11 +1,9 @@
-import React from "react"
-
 import Link from "next/link"
 
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap"
 
-import data from "../data/text.json"
-import Image from "../components/CustomImage"
+import data from "@jsonFiles/text.json"
+import Image from "@components/CustomImage"
 
 export async function getStaticProps() {
   return {
@@ -22,7 +20,7 @@ export async function getStaticProps() {
 
 const Text = () => {
   return (
-    <React.Fragment>
+    <>
       <section className="hero py-6 py-lg-7 text-white dark-overlay">
         {data.hero && (
           <Image
@@ -86,7 +84,7 @@ const Text = () => {
           )}
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

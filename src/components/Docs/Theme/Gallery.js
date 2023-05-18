@@ -2,10 +2,10 @@ import React from "react"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
-import Gallery from "../../../components/Gallery"
+import Gallery from "@components/Gallery"
 
 const GalleryComponent = () => {
-  const highlightCode = `import Gallery from '../components/Gallery'
+  const highlightCode = `import Gallery from '@components/Gallery'
 
 import data from 'data.json'
 

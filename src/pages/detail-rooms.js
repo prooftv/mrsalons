@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 
 import { DayPicker } from "react-day-picker"
@@ -13,17 +13,17 @@ import {
   Badge,
   Overlay,
 } from "react-bootstrap"
-import UseWindowSize from "../hooks/UseWindowSize"
-import Swiper from "../components/Swiper"
+import UseWindowSize from "@hooks/UseWindowSize"
+import Swiper from "@components/Swiper"
 
-import Reviews from "../components/Reviews"
-import ReviewForm from "../components/ReviewForm"
+import Reviews from "@components/Reviews"
+import ReviewForm from "@components/ReviewForm"
 
-import data from "../data/detail-rooms.json"
+import data from "@jsonFiles/detail-rooms.json"
 
-import SwiperGallery from "../components/SwiperGallery"
-import Gallery from "../components/Gallery"
-import Map from "../components/Map"
+import SwiperGallery from "@components/SwiperGallery"
+import Gallery from "@components/Gallery"
+import Map from "@components/Map"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faArrowRight,
@@ -42,7 +42,7 @@ import {
   faUtensils,
   faWifi,
 } from "@fortawesome/free-solid-svg-icons"
-import Avatar from "../components/Avatar"
+import Avatar from "@components/Avatar"
 
 export async function getStaticProps() {
   return {
@@ -81,7 +81,7 @@ const DetailRooms = () => {
     }
   }, [range])
   return (
-    <React.Fragment>
+    <>
       <section>
         <SwiperGallery data={data.swiper} />
         <Container className="py-5">
@@ -171,7 +171,7 @@ const DetailRooms = () => {
                 </p>
               </div>
               {data.amenities && (
-                <React.Fragment>
+                <>
                   <div className="text-block">
                     <h4 className="mb-4">Amenities</h4>
                     <Row>
@@ -246,7 +246,7 @@ const DetailRooms = () => {
                       ))}
                     </ul>
                   </div>
-                </React.Fragment>
+                </>
               )}
               {data.author && (
                 <div className="text-block">
@@ -462,7 +462,7 @@ const DetailRooms = () => {
           </Container>
         </section>
       )}
-    </React.Fragment>
+    </>
   )
 }
 

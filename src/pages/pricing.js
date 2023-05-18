@@ -1,10 +1,8 @@
-import React from "react"
-
 import Link from "next/link"
 
 import { Container, Row, Col, Card, Button, Breadcrumb } from "react-bootstrap"
 
-import data from "../data/pricing.json"
+import data from "@jsonFiles/pricing.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons"
 
@@ -23,7 +21,7 @@ export async function getStaticProps() {
 
 const Pricing = () => {
   return (
-    <React.Fragment>
+    <>
       <section className="hero py-5 py-lg-7">
         <Container className="position-relative">
           <Breadcrumb listProps={{ className: "ps-0 justify-content-center" }}>
@@ -105,7 +103,7 @@ const Pricing = () => {
           </Row>
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

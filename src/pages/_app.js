@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/Layout"
+import Layout from "@components/Layout"
 import "swiper/css/bundle"
 // swiper core styles
 import "swiper/css"
@@ -9,7 +9,7 @@ import "swiper/css/pagination"
 import "swiper/css/navigation"
 
 import "@fortawesome/fontawesome-svg-core/styles.css"
-import "../scss/style.default.scss"
+import "@scss/style.default.scss"
 
 const App = ({ Component, pageProps }) => {
   return (

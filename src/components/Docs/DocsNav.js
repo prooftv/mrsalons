@@ -2,7 +2,7 @@ import React from "react"
 
 import { Nav } from "react-bootstrap"
 
-import ActiveLink from "../ActiveLink"
+import ActiveLink from "@components/ActiveLink"
 
 const DocsNav = () => {
   return (

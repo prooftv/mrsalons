@@ -4,8 +4,8 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import Swiper from "./Swiper"
 
-import data from "../data/lastminute.json"
-import geoJSON from "../data/rooms-geojson.json"
+import data from "@jsonFiles/lastminute.json"
+import geoJSON from "@jsonFiles/rooms-geojson.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 

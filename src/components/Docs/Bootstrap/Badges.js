@@ -3,7 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
 import { Card, Badge } from "react-bootstrap"
-import Icon from "../../Icon"
+import Icon from "@components/Icon"
 
 const Badges = () => {
   return (

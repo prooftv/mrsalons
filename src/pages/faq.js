@@ -1,10 +1,10 @@
-import React from "react"
-
+import {Fragment} from "react";
 import Link from "next/link"
+
 
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap"
 
-import data from "../data/faq.json"
+import data from "@jsonFiles/faq.json"
 
 export async function getStaticProps() {
   return {
@@ -26,7 +26,7 @@ const Faq = () => {
     return result
   }
   return (
-    <React.Fragment>
+    <>
       <section className="hero py-5 py-lg-7">
         <Container className="position-relative">
           <Breadcrumb listProps={{ className: "ps-0 justify-content-center" }}>
@@ -59,12 +59,12 @@ const Faq = () => {
                     {groupedQuestions.map((questions) => (
                       <Col md="6" key={questions[0].title}>
                         {questions.map((question) => (
-                          <React.Fragment key={question.title}>
+                          <Fragment key={question.title}>
                             <h5>{question.title}</h5>
                             <p className="text-muted mb-4">
                               {question.content}
                             </p>
-                          </React.Fragment>
+                          </Fragment>
                         ))}
                       </Col>
                     ))}
@@ -74,7 +74,7 @@ const Faq = () => {
             })}
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

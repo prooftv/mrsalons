@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
-import UseWindowSize from "../hooks/UseWindowSize"
+import UseWindowSize from "@hooks/UseWindowSize"
 
 import { DayPicker } from "react-day-picker"
 import "react-day-picker/dist/style.css"
@@ -17,13 +17,13 @@ import {
 } from "react-bootstrap"
 
 import Nouislider from "nouislider-react"
-import Pagination from "../components/Pagination"
+import Pagination from "@components/Pagination"
 
-import ResultsTopBar from "../components/ResultsTopBar"
-import CardRoom from "../components/CardRoom"
+import ResultsTopBar from "@components/ResultsTopBar"
+import CardRoom from "@components/CardRoom"
 
-import data from "../data/category-3-rooms.json"
-import geoJSON from "../data/rooms-geojson.json"
+import data from "@jsonFiles/category-3-rooms.json"
+import geoJSON from "@jsonFiles/rooms-geojson.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight, faSearch } from "@fortawesome/free-solid-svg-icons"
 
@@ -71,7 +71,7 @@ const Category3Rooms = () => {
     }
   }, [range])
   return (
-    <React.Fragment>
+    <>
       <Container fluid className="pt-5 pb-3 border-bottom px-lg-5">
         <Row>
           <Col xl="8">
@@ -443,7 +443,7 @@ const Category3Rooms = () => {
           </Col>
         </Row>
       </Container>
-    </React.Fragment>
+    </>
   )
 }
 

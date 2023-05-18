@@ -1,4 +1,4 @@
-import React from "react"
+import { useState, Fragment } from "react"
 import Link from "next/link"
 
 import Select from "react-select"
@@ -14,8 +14,8 @@ import {
   Breadcrumb,
 } from "react-bootstrap"
 
-import data from "../data/user-personal.json"
-import Icon from "../components/Icon"
+import data from "@jsonFiles/user-personal.json"
+import Icon from "@components/Icon"
 import {
   faAddressBook,
   faBirthdayCake,
@@ -40,8 +40,8 @@ export async function getStaticProps() {
 }
 
 const UserPersonal = () => {
-  const [personalCollapse, setPersonalCollapse] = React.useState(false)
-  const [addressCollapse, setAddressCollapse] = React.useState(false)
+  const [personalCollapse, setPersonalCollapse] = useState(false)
+  const [addressCollapse, setAddressCollapse] = useState(false)
 
   return (
     <section className="py-5">
@@ -92,14 +92,14 @@ const UserPersonal = () => {
                       userIcon = faIdCard
                   }
                   return (
-                    <React.Fragment key={index}>
+                    <Fragment key={index}>
                       <FontAwesomeIcon icon={userIcon} className="me-2 fa-fw" />
                       {item.title}
                       {index === data.personal.length - 2 && (
                         <span className="mx-2"> | </span>
                       )}
                       {index < data.personal.length - 2 && <br />}
-                    </React.Fragment>
+                    </Fragment>
                   )
                 })}
               </p>

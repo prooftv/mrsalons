@@ -2,7 +2,7 @@ import React from "react"
 
 import { Row, Col } from "react-bootstrap"
 
-import Avatar from "../../Avatar"
+import Avatar from "@components/Avatar"
 const AvatarComponent = () => {
   return (
     <div id="avatar" className="docs-item element">

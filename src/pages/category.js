@@ -1,15 +1,15 @@
-import React from "react"
+import { useState } from "react"
 import Link from "next/link"
 
 import { Container, Row, Col, Nav } from "react-bootstrap"
 
-import CardRestaurant from "../components/CardRestaurant"
-import ResultsTopBar from "../components/ResultsTopBar"
-import Pagination from "../components/Pagination"
-import Map from "../components/Map"
+import CardRestaurant from "@components/CardRestaurant"
+import ResultsTopBar from "@components/ResultsTopBar"
+import Pagination from "@components/Pagination"
+import Map from "@components/Map"
 
-import data from "../data/category.json"
-import geoJSON from "../data/restaurants-geojson.json"
+import data from "@jsonFiles/category.json"
+import geoJSON from "@jsonFiles/restaurants-geojson.json"
 
 export async function getStaticProps() {
   return {
@@ -25,7 +25,7 @@ export async function getStaticProps() {
 }
 
 const Category = () => {
-  const [hoverCard, setHoverCard] = React.useState(null)
+  const [hoverCard, setHoverCard] = useState(null)
   const onCardEnter = (id) => {
     setHoverCard(id)
   }
@@ -34,7 +34,7 @@ const Category = () => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <section>
         <div className="map-wrapper-450">
           <Map
@@ -52,7 +52,7 @@ const Category = () => {
           <h1>{data.title}</h1>
           <p className="lead mb-5">{data.content && data.content}</p>
           {data.navpills && (
-            <React.Fragment>
+            <>
               <h5>City Quarter</h5>
               <Nav variant="pills" className="nav-pills-custom">
                 {data.navpills.map((pill, index) => (
@@ -65,7 +65,7 @@ const Category = () => {
                   </Nav.Item>
                 ))}
               </Nav>
-            </React.Fragment>
+            </>
           )}
         </Container>
       </section>
@@ -94,7 +94,7 @@ const Category = () => {
           <Pagination />
         </Container>
       </section>
-    </React.Fragment>
+    </>
   )
 }
 

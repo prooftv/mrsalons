@@ -2,17 +2,16 @@ import Link from "next/link"
 
 import { Container, Row, Col, Button } from "react-bootstrap"
 
-import RichSwiper from "../components/RichSwiper"
-import SearchBar from "../components/SearchBar"
-import LastMinute from "../components/LastMinute"
-import Guides from "../components/Guides"
-import Instagram from "../components/Instagram"
+import RichSwiper from "@components/RichSwiper"
+import SearchBar from "@components/SearchBar"
+import LastMinute from "@components/LastMinute"
+import Guides from "@components/Guides"
+import Instagram from "@components/Instagram"
 
-import data from "../data/index3.json"
-import Image from "../components/CustomImage"
+import data from "@jsonFiles/index3.json"
+import Image from "@components/CustomImage"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
-import React from "react"
 
 export async function getStaticProps() {
   return {
@@ -31,7 +30,7 @@ export async function getStaticProps() {
 
 const Index3 = () => {
   return (
-    <React.Fragment>
+    <>
       <RichSwiper
         className="multi-slider"
         data={data.swiper}
@@ -149,7 +148,7 @@ const Index3 = () => {
       )}
       <LastMinute />
       <Instagram />
-    </React.Fragment>
+    </>
   )
 }
 
