@@ -1,11 +1,11 @@
 import React from "react"
 import Head from "next/head"
-import NextNProgress from "../components/NextNProgress"
+import NextNProgress from "@components/NextNProgress"
 
 import Header from "./Header"
 import Footer from "./Footer"
-import { FormProvider } from "../components/FormContext"
-import { BookingProvider } from "../components/BookingContext"
+import { FormProvider } from "@components/FormContext"
+import { BookingProvider } from "@components/BookingContext"
 import SvgIcons from "./SvgIcons"
 import SSRProvider from "react-bootstrap/SSRProvider"
 

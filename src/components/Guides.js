@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import Swiper from "./Swiper"
 
-import data from "../data/guides.json"
+import data from "@jsonFiles/guides.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 

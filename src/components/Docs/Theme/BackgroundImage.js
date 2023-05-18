@@ -1,4 +1,4 @@
-import Image from "../../CustomImage"
+import Image from "@components/CustomImage"
 import React from "react"
 
 import { Card } from "react-bootstrap"

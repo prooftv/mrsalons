@@ -1,10 +1,10 @@
 import React from "react"
 import { Dropdown, NavLink, NavItem } from "react-bootstrap"
-import ActiveLink from "./../ActiveLink"
+import ActiveLink from "@components/ActiveLink"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons"
-import userMenu from "../../data/user-menu.json"
-import Avatar from "../Avatar"
+import userMenu from "@jsonFiles/user-menu.json"
+import Avatar from "@components/Avatar"
 export default function UserMenu({ onLinkClick }) {
   return (
     <Dropdown

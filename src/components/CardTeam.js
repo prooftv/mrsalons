@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 
 import { Card } from "react-bootstrap"
-import Image from "../components/CustomImage"
+import Image from "@components/CustomImage"
 
 const CardTeam = (props) => {
   const data = props.data

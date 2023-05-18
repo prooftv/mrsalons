@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap"
 import { Swiper, SwiperSlide } from "swiper/react"
 import Image from "./CustomImage"
 
-import data from "../data/instagram.json"
+import data from "@jsonFiles/instagram.json"
 
 const Instagram = () => {
   const params = {

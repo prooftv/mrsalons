@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import { Card, Badge } from "react-bootstrap"
 
-import Stars from "../components/Stars"
+import Stars from "@components/Stars"
 import Image from "./CustomImage"
 import Icon from "./Icon"
 

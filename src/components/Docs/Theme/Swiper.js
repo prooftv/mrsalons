@@ -1,19 +1,19 @@
-import React from "react"
+import {useState} from "react"
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
-import Swiper from "../../Swiper"
+import Swiper from "@components/Swiper"
 
 import { Collapse, Button } from "react-bootstrap"
 
-import geoJSONRooms from "../../../data/rooms-geojson.json"
-import geoJSONRestaurants from "../../../data/restaurants-geojson.json"
-import propertySlides from "../../../data/index4.json"
-import imgCardsSlides from "../../../data/guides.json"
+import geoJSONRooms from "@jsonFiles/rooms-geojson.json"
+import geoJSONRestaurants from "@jsonFiles/restaurants-geojson.json"
+import propertySlides from "@jsonFiles/index4.json"
+import imgCardsSlides from "@jsonFiles/guides.json"
 
 const SwiperComponent = () => {
-  const [propsCollapse, setPropsCollapse] = React.useState(false)
+  const [propsCollapse, setPropsCollapse] = useState(false)
 
   return (
     <div id="swiper" className="docs-item element">

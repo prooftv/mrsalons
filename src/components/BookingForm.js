@@ -16,8 +16,8 @@ import { Row, Col, Button, Collapse, Form } from "react-bootstrap"
 
 import Select from "react-select"
 
-import { BookingContext } from "../components/BookingContext"
-import Avatar from "../components/Avatar"
+import { BookingContext } from "@components/BookingContext"
+import Avatar from "@components/Avatar"
 
 const BookingForm = (props) => {
   const data = props.data

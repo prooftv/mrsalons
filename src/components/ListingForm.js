@@ -7,7 +7,7 @@ import { Row, Col, Form, Button } from "react-bootstrap"
 import Select from "react-select"
 import { useDropzone } from "react-dropzone"
 
-import { FormContext } from "../components/FormContext"
+import { FormContext } from "@components/FormContext"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faChevronLeft,
